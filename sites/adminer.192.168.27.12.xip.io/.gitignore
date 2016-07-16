@@ -1,0 +1,4 @@
+logs/*
+!logs/.gitkeep
+public_html/*
+!public_html/index.php
