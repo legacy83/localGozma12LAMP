@@ -1,6 +1,6 @@
 {
   "name": "trsenna/localGozma12LAMP",
-  "description": "Easily vagrant up my personal WordPress stack locally.",
+  "description": "Easily vagrant up my gozma12 LAMP stack locally.",
   "type": "project",
   "license": "GPL-2.0+",
   "authors": [
