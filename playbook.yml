@@ -7,5 +7,5 @@
       apt: update_cache=yes cache_valid_time=3600
 
   roles:
-    - vendor/trsenna/gozma14/roles/stack.lamp
-    - vendor/trsenna/gozma14/roles/local.dev
+    - vendor/trsenna/gozma12/roles/stack.lamp
+    - vendor/trsenna/gozma12/roles/local.dev

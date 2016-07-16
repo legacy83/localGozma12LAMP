@@ -1,19 +1,12 @@
 ---
 - name: MySQL Users
-  mysql_user:
-    name: "{{ item.name }}"
-    host: "{{ item.host | default('localhost') }}"
-    password: "{{ item.password }}"
-    priv: "{{ item.priv | default('*.*:USAGE') }}"
-    state: "{{ item.state | default('present') }}"
-    append_privs: "{{ item.append_privs | default('no') }}"
-  with_items: "{{ mysql_users }}"
-  no_log: true
+  mysql_user: "name={{ item }} password={{ item }}@secret priv=*.*:ALL state=present"
+  with_items:
+    - test
+    - www
 
 - name: MySQL Databases
-  mysql_db:
-    name: "{{ item.name }}"
-    collation: "{{ item.collation | default('utf8_general_ci') }}"
-    encoding: "{{ item.encoding | default('utf8') }}"
-    state: present
-  with_items: "{{ mysql_databases }}"
+  mysql_db: "name={{ item }} state=present"
+  with_items:
+    - test
+    - www
