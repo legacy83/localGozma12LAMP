@@ -1,3 +1,3 @@
 ---
-include: mainDatabases.yml
-include: mainVirtualHosts.yml
+- include: mainDatabases.yml
+- include: mainVirtualHosts.yml
