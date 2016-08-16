@@ -1,22 +1,4 @@
 ---
-- name: Public Html Directories
-  file:
-    path: "/var/www/{{ item }}/public_html"
-    state: directory
-  with_items:
-    - gozma12.local
-    - adminer.gozma12.local
-    - www.gozma12.local
-
-- name: Log Directories
-  file:
-    path: "/var/www/{{ item }}/logs"
-    state: directory
-  with_items:
-    - gozma12.local
-    - adminer.gozma12.local
-    - www.gozma12.local
-
 - name: Sites Available
   copy:
     src: "sites-available/{{ item }}.conf"
