@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
         ubuntu12.vm.hostname = "localGozma12LAMP"
         ubuntu12.vm.network "private_network", ip: "192.168.27.12"
         ubuntu12.vm.provision "ansible" do |ansible|
-            ansible.playbook = "provisioning/playbook.yml"
+            ansible.playbook = "playbook.yml"
         end
     end
 end
